@@ -70,7 +70,7 @@ def chat():
     print(score) 
 
     if score < 0.7 or not context.strip():
-     return jsonify({"answer": "I don't know that story yet 😊"})
+     return jsonify({"answer": "I don't know that story yet"})
     
     
     prompt = f"""Context: {context}
@@ -83,7 +83,7 @@ Answer the question based on the context above in a friendly way for children.""
     answer = answer.strip()
     
     if not answer or len(answer) < 3:
-        answer = "I'm not sure about that from the story 😊"
+        answer = "I'm not sure about that from the story"
 
     return jsonify({"answer": answer})
 
